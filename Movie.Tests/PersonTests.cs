@@ -18,5 +18,11 @@ namespace Movie.Tests
 
             Assert.True(expected == actual.GetType());
         }
+
+        [Fact]
+        public void Test_PersonHistory()
+        {
+            Assert.NotNull(new Person().History);
+        }
     }
 }

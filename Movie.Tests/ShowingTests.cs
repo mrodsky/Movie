@@ -18,5 +18,16 @@ namespace Movie.Tests
 
             Assert.True(expected == actual.GetType());
         }
+
+        [Fact]
+        public void Test_ShowingMovies()
+        {
+            var expected = 1;
+            var sut = new Showing();
+            var actual = sut.Movies;
+
+            Assert.True(typeof(List<MovieClass>) == actual.GetType());
+            Assert.True(expected <= actual.Count);
+        }
     }
 }

@@ -18,5 +18,29 @@ namespace Movie.Tests
 
             Assert.True(expected == actual.GetType());
         }
+
+
+        [Fact]
+        // voting on the movie should have a movie objecty
+        // and also we need voters (moviegoer spectators)
+        public void Test_VotingForMovie()
+        {
+            var expected = 1;
+            var sut = new Voting();
+            
+
+            Assert.NotNull(sut.Movie);
+        }
+
+        public void Test_VotingPeople()
+        {
+            var expected = 0;
+            var sut = new Voting();
+            var actual = sut.People;
+
+            Assert.True(typeof(List<Person>) == actual.GetType());
+            Assert.True(expected <= actual.Count);
+        }
+
     }
 }

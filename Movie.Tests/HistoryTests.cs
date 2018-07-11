@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Movie.Library.Models;
 using System.Text;
 using Xunit;
-
+using Movie.Library;
 
 namespace Movie.Tests
 {
@@ -19,6 +19,18 @@ namespace Movie.Tests
             var actual = sut.Id;
 
             Assert.True(expected  == actual.GetType());
+        }
+
+        [Fact]
+        public void Test_HistoryMovieList()
+        {   
+            var expected = 1;
+            var sut = new History();
+            var actual = sut.Movies;
+
+            Assert.True(typeof(List<MovieClass>) == actual.GetType());
+            Assert.True(expected <= actual.Count);
+            
         }
     }
 }

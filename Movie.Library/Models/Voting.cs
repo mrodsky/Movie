@@ -7,6 +7,11 @@ namespace Movie.Library.Models
 {
     public class Voting : AModel
     {
+        public MovieClass Movie
+        {
+            get;
+            set;
+        }
         public Voting()
         {
 

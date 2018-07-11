@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Client", "Movie.Client\Movie.Client.csproj", "{DEA4CC4B-0A70-4297-8D38-FD5F2F8E807F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Library", "Movie.Library\Movie.Library.csproj", "{A5FDDBAD-DABC-4080-935A-F3E6E5D5ED95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movie.Tests", "Movie.Tests\Movie.Tests.csproj", "{426C4BF9-7F63-4925-9BB1-1C0F111F26D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DEA4CC4B-0A70-4297-8D38-FD5F2F8E807F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEA4CC4B-0A70-4297-8D38-FD5F2F8E807F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEA4CC4B-0A70-4297-8D38-FD5F2F8E807F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5FDDBAD-DABC-4080-935A-F3E6E5D5ED95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5FDDBAD-DABC-4080-935A-F3E6E5D5ED95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5FDDBAD-DABC-4080-935A-F3E6E5D5ED95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5FDDBAD-DABC-4080-935A-F3E6E5D5ED95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{426C4BF9-7F63-4925-9BB1-1C0F111F26D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426C4BF9-7F63-4925-9BB1-1C0F111F26D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426C4BF9-7F63-4925-9BB1-1C0F111F26D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426C4BF9-7F63-4925-9BB1-1C0F111F26D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

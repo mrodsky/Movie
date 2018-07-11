@@ -13,4 +13,8 @@
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Movie.Library\Movie.Library.csproj" />
+  </ItemGroup>
+
 </Project>

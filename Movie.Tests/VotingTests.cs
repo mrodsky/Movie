@@ -25,9 +25,8 @@ namespace Movie.Tests
         // and also we need voters (moviegoer spectators)
         public void Test_VotingForMovie()
         {
-            var expected = 1;
+           //var expected = 1;
             var sut = new Voting();
-            
 
             Assert.NotNull(sut.Movie);
         }

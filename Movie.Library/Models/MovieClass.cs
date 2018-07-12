@@ -9,7 +9,7 @@ namespace Movie.Library
 {
     public class MovieClass : AModel
     {
-        
+        private string _title;
 
         public List<Actor> Actors
         {
@@ -25,29 +25,55 @@ namespace Movie.Library
 
         public string Title
         {
-            get;
-            set;
+            get
+            {
+
+                return _title;
+            }
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value))
+                {
+                    return;
+                }
+                _title = value;
+            }
         }
 
-        
         public MovieClass()
         {
-            Actors = new List<Actor>();
-            Actors.Add(new Actor());
-            Title = string.Empty;
-            Genre = EGenre.Romantic_Western;
+            Initialize();
+        }
+   
+        //private MovieClass()
+        //{
+        //    Actors = new List<Actor>();
+        //    Actors.Add(new Actor());
+        //    Title = "(no title)";
+        //    Genre = EGenre.Romantic_Western;
+        //}
+
+        public MovieClass(string t)
+        {
+            Initialize(t);
         }
 
-        public MovieClass(string t, string g, Actor a)
+        public MovieClass(string t, EGenre genre)
+        {
+            Initialize(genre: genre, t: t);
+        }
+
+        public MovieClass(string t, EGenre genre, List<Actor> actors)
+        {
+            Initialize(t, genre, actors);
+        }
+
+        public void Initialize(string t = "(no title)", EGenre genre = EGenre.Action,
+                                   List<Actor> actors = null)
         {
             Title = t;
-            if (EGenre.IsDefined(typeof(EGenre), g))
-            {
-                Genre = Enum.g;
-            }
-            Actors.Add(a);
-
+            Genre = genre;
+            Actors = actors ?? new List<Actor> { new Actor() };
         }
-
     }
 }

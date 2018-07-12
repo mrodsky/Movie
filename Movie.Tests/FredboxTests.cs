@@ -25,6 +25,16 @@ namespace Movie.Tests
 
             Assert.True(expected == actual.Title);
         }
+        [Fact]
+        public void Test_FredboxMakeMovie_Negative()
+        {
+            string title = null;
+            var actual = sut.MakeMovie(title);
+
+            Assert.NotNull(actual.Title);
+            Assert.Null(actual.Title);
+        }
+
 
 
         [Fact]
@@ -41,12 +51,12 @@ namespace Movie.Tests
         public void Test_FredboxDistributeMovie()
         {
             var title = "My Second Movie";
-            var expected = sut.GetMovies(); // we want to see what movies currently has 
+            var expected = sut.GetMovies().Count(); // we want to see what movies currently has 
            
             sut.DistributeMovie(sut.MakeMovie(title));
             var  actual = sut.GetMovies();
 
-            Assert.True(expected.Count() <= actual.Count()); // we want to check our count before we distribute should be less then our new list 
+            Assert.True(expected < actual.Count()); // we want to check our count before we distribute should be less then our new list 
         }
     }
 }

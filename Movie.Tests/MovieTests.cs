@@ -33,7 +33,6 @@ namespace Movie.Tests
         public void Test_MovieActor()
         {
             var expected = 1;
-          
             var actual = sut.Actors;
 
             Assert.True(typeof(List<Actor>) == actual.GetType());
@@ -46,6 +45,7 @@ namespace Movie.Tests
             var expected = typeof(string);
 
             Assert.True(expected == sut.Title.GetType());
+            Assert.NotEmpty(sut.Title);
         }
 
         [Fact]
@@ -54,6 +54,7 @@ namespace Movie.Tests
             var expected = typeof(EGenre);
 
             Assert.True(expected == sut.Genre.GetType());
+            Assert.NotEqual(EGenre.None, sut.Genre);
         }
     }
 }

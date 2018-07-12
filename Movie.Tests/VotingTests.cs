@@ -32,6 +32,7 @@ namespace Movie.Tests
             Assert.NotNull(sut.Movie);
         }
 
+        [Fact]
         public void Test_VotingPeople()
         {
             var expected = 0;

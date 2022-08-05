@@ -49,7 +49,7 @@ namespace Movie.Tests
         }
 
         [Fact]
-        public void Test_MovieGenreTest()
+        public void Test_MovieGenre()
         {
             var expected = typeof(EGenre);
 
